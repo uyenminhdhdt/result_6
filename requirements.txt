@@ -1,0 +1,6 @@
+numpy
+flask
+sklearn
+pickle4
+werkzeug
+pandas
