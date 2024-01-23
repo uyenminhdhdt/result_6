@@ -1,0 +1,423 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="number/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dự báo khả năng tốt nghiệp đúng hạn của sinh viên năm thứ 4</title>
+        <style>
+        .head {
+            width: 98%;
+            height: 9%;
+            background-image: url(../static/13.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 1%;
+            color: #FFFFFF;
+        }
+        
+        .head h1 {
+            float: left;
+            margin-top: 0%;
+            margin-left: 8%;
+        }
+        
+        .input {
+            width: 26.3%;
+            float: left;
+            margin-left: 5%;
+            margin-top: 0.5%;
+            border: 2px solid rgb(0, 17, 255);
+            border-radius: 10px;
+        }
+        
+        .input>p>span {
+            margin-left: 10px;
+        }
+        
+        .input>p>input {
+            float: right;
+            margin-right: 10px;
+            margin-top: -5px;
+            height: 22px;
+            width: 28%;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        
+        .input>p {
+            font-weight: bolder;
+            font-size: 20px;
+            color: #000000;
+        }
+        
+        .info {
+            width: 89.5%;
+    height: 60px;
+    float: left;
+    margin-left: 5%;
+    margin-top: -3.5%;
+    border: 2px solid rgb(0, 17, 255);
+    border-radius: 10px;
+        }
+        
+        .info>p>span {
+            margin-left: 10px;
+        }
+        
+        .info>p>input {
+            margin-right: 15px;
+            margin-left: 20px;
+            margin-top: -5px;
+            height: 22px;
+            width: 50%;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        
+        .info>p {
+            font-weight: bolder;
+            font-size: 20px;
+            color: #000000;
+            margin-left: 5%;
+            float: left;
+            width: 27%;
+        }
+        
+        .ket_qua {
+            width: 100%;
+            font-family: sans-serif;
+            font-size: x-large;
+            color: #ff0000;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-top: 37%;
+        }
+        
+        .student_info {
+            width: 900px;
+            font-family: sans-serif;
+            font-size: x-large;
+            color: #ff0000;
+            font-weight: bolder;
+            margin-left: 229px;
+            margin-top: 588px;
+        }
+        
+        .btn {
+            width: 264px;
+            float: right;
+            margin-right: 560px;
+            margin-top: 1%;
+        }
+        
+        .btn>button {
+            height: 36px;
+            width: 264px;
+            font-weight: bolder;
+            font-size: 17px;
+        }
+        
+        .btn:hover button {
+            background-color: #291FFA;
+            color: white;
+        }
+        
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+        
+        @media only screen and (max-width: 900px) {
+            .head {
+                height: 20%;
+            }
+            .head h1 {
+                font-size: 1.3rem;
+                line-height: 1.2;
+                text-align: center;
+                margin-left: auto;
+            }
+            .input {
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 2%;
+            }
+            .info {
+                width: 90%;
+                height: auto;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .info>p {
+                font-weight: bolder;
+                font-size: 20px;
+                color: #000000;
+                margin-left: 0%;
+                width: 100%;
+                float: right;
+            }
+            .info>p>input {
+                margin-right: 10px;
+                margin-top: -5px;
+                height: 22px;
+                width: 28%;
+                font-size: 17px;
+                font-weight: bold;
+                float: right;
+            }
+            .ket_qua {
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 10%;
+            }
+            .btn {
+                width: 60%;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .btn>button {
+                width: 100%;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+        <div style="background-color: #FFFFFF; height: 100%;">
+            <div class="head">
+                <h1>DỰ BÁO KHẢ NĂNG TỐT NGHIỆP ĐÚNG HẠN<br>DÀNH CHO SINH VIÊN
+                    NĂM THỨ 4</h1>
+            </div>
+            <script src="https://www.lactame.com/lib/ml/3.2.0/ml.min.js"></script>
+<script>
+    X = new ML.Matrix([
+        [22410080,23,2,7.8,20,0,8.0,22,3,7,19,4,6.7,22,0,8.1,25,0,8.2],
+	    [22410081,23,2,7.8,20,0,8.0,15,9,7,14,10,5.7,10,15,4,24,0,7.8],
+	    [22410082,15,10,6.0,20,0,8.0,21,2,7,14,10,5.7,10,15,4,24,0,8.2],
+	    [22410083,24,0,7.0,20,0,8.0,21,2,7,20,2,6.0,25,0,8,24,0,8.2],
+	    [22410084,24,0,7.0,20,0,8.0,21,2,7,20,2,6.0,25,0,8,24,0,8.2],
+	    [22410085,24,0,7.0,20,0,8.0,21,2,7,20,2,6.0,25,0,8,24,0,8.2],
+        [22410086, 14,9,4,20,3,4.0,15,8,6,20,2,6.0,15,7,4,13,10,5.0],
+        [22410087,21,4,6.2,19,2,7.0,18,7,4.0,11,6,5.0,10,15,6.0,12,7,6],
+        [22410088,25,0,7.2,20,2,6.8,19,2,7.0,20,0,6.7,21,0,7.5,22,2,8.3],
+        [22410089,25,0,7.2,20,2,6.8,19,2,7.0,20,0,6.7,21,0,7.5,22,2,8.3],
+        [22410090,12,0,5.2,11,6,5.8,18,6,7.0,20,5,7.4,21,3,5.7,20,3,4.8],
+
+
+
+      ]);
+    function setDomain(){
+        let mssv = fruitSelect.value;
+	if  (parseInt(mssv) == 22410080) {document.getElementById('name').value = "Nguyễn Thanh Bình";document.getElementById('class').value = "ĐHCNTT20A";}
+	if  (parseInt(mssv) == 22410081) {document.getElementById('name').value = "Trần Đăng Khoa";document.getElementById('class').value = "ĐHCNTT20B";}
+	if  (parseInt(mssv) == 22410082) {document.getElementById('name').value = "Võ Tuấn Anh";document.getElementById('class').value = "ĐHCNTT20B";}
+	if  (parseInt(mssv) == 22410083) {document.getElementById('name').value = "Đào Duy Thanh";document.getElementById('class').value = "ĐHCNTT20AA";}
+    if (parseInt(mssv) == 22410084) { document.getElementById('name').value = "Nguyễn Bé Như"; document.getElementById('class').value = "ĐHCNTT20B"; }
+    if (parseInt(mssv) == 22410085) { document.getElementById('name').value = "Nguyễn Minh Đăng"; document.getElementById('class').value = "ĐHCNTT20A"; }
+    if (parseInt(mssv) == 22410086) { document.getElementById('name').value = "Thái Kim Nhi"; document.getElementById('class').value = "ĐHCNTT20A"; }
+    if (parseInt(mssv) == 22410087) { document.getElementById('name').value = "Huỳnh Văn Uyên"; document.getElementById('class').value = "ĐHCNTT20A"; }
+    if (parseInt(mssv) == 22410088) { document.getElementById('name').value = "Lê Duy Nhân"; document.getElementById('class').value = "ĐHCNTT20B"; }
+    if (parseInt(mssv) == 22410089) { document.getElementById('name').value = "Trần Kim Ngọc"; document.getElementById('class').value = "ĐHCNTT20B"; }
+    if (parseInt(mssv) == 22410090) { document.getElementById('name').value = "Lê Chí Cường"; document.getElementById('class').value = "ĐHCNTT20A"; }
+	
+	
+	for (t = 0; t < 15; t++) {
+		if  (parseInt(mssv) == X.get(t, 0))
+	{
+        document.getElementById('tcd1').value = X.get(t,1) ;
+	document.getElementById('tcr1').value = X.get(t, 2);
+	document.getElementById('dtb1').value = X.get(t, 3);
+	document.getElementById('tcd2').value = X.get(t, 4);
+	document.getElementById('tcr2').value = X.get(t, 5);
+	document.getElementById('dtb2').value = X.get(t, 6);
+	document.getElementById('tcd3').value = X.get(t, 7);
+	document.getElementById('tcr3').value = X.get(t, 8);
+	document.getElementById('dtb3').value = X.get(t, 9);
+	document.getElementById('tcd4').value = X.get(t, 10);
+	document.getElementById('tcr4').value = X.get(t, 11);
+	document.getElementById('dtb4').value = X.get(t, 12);
+	document.getElementById('tcd5').value = X.get(t, 13);
+	document.getElementById('tcr5').value = X.get(t, 14);
+	document.getElementById('dtb5').value = X.get(t, 15);
+	document.getElementById('tcd6').value = X.get(t, 16);
+	document.getElementById('tcr6').value = X.get(t, 17);
+	document.getElementById('dtb6').value = X.get(t, 18);
+    	}}
+	
+}
+	
+
+</script>
+
+<!-- <label for="fruit">Lựa chọn mã sinh viên</label>
+
+<select id="fruit">
+<option value="0022410080">0022410080</option>
+<option value="0022410081">0022410081</option>
+<option value="0022410082">0022410082</option>
+<option value="0022410083">0022410083</option>
+<option value="0022410084">0022410084</option>
+</select> -->
+
+
+<label style="margin-right:15px;
+    margin-left: -53%;
+    margin-top: 100px;
+    height: 32px;
+    width: 11%;
+    font-size: 20px;
+    font-weight: bold;">
+    Mã sinh viên </label>
+            
+<input style="margin-right: 30px;
+    margin-left: 0,5%;
+    margin-top: 27px;
+    height: 22px;
+    width: 11%;
+    font-size: 17px;
+    font-weight: bold;
+
+" type="text" id="mssv" name="masv" value="" />
+    <button style="height: 30px; font-weight: bold;" onclick="setDomain()">TÌM KIẾM</button>
+
+    <div class="info">
+        <p style="margin-left: 40%;">
+            <span>Họ tên</span><input type="text" id="name"
+                                      name="name" required=required />
+        </p>
+        <p style="margin-right:2px;">
+            <span>Lớp</span><input type="text" id="class"
+                                   name="class" required=required />
+        </p>
+    </div>
+    <!--------------------------------------->
+    <script language="javascript" type="text/javascript">
+
+        let fruitSelect = document.getElementById('mssv');
+        fruitSelect.options[2].selected = true;
+
+        let checkButton = document.getElementById('checkButton');
+        checkButton.addEventListener('click', buttonClick);
+
+
+    </script>
+    <form action="{{url_for('predict')}}" method="post" style="margin-top: 0%;">
+
+        <div id="inputs"></div>
+        <div class="btn">
+            <button type="submit">DỰ BÁO</button>
+        </div>
+    </form>
+    <br />
+    <br />
+    <div class="ket_qua" style="text-align: center;">
+        {{ prediction_text }}
+    </div>
+    </p>
+</div>
+        <script>
+        const inputs = document.getElementById("inputs");
+        const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
+        for (let i = 1; i <= 6; i++) {
+            let inputDiv = document.createElement("div");
+            inputDiv.className = "input";
+            inputDiv.innerHTML = `
+  <p align="center">HỌC KÌ ${romanNumerals[i-1]}</p>
+  <p><span>Số tín chỉ đạt</span><input type="number" min="0" max="25" id="tcd${i}" name="tcd${i}" required></p>
+  <p><span>Số tín chỉ không đạt</span><input type="number" min="0" max="25" id="tcr${i}" name="tcr${i}" required></p>
+  <p><span>Điểm trung bình hệ 10</span><input type="number" min="0" max="10" step="0.1" id="dtb${i}" name="dtb${i}" required></p>
+`;
+            inputs.appendChild(inputDiv);
+        }
+
+        // Lấy ra các giá trị đã lưu từ Local Storage
+        const inputNames = ['name', 'class', ...Array.from({
+            length: 6
+        }, (_, i) => `tcd${i+1}`), ...Array.from({
+            length: 6
+        }, (_, i) => `tcr${i+1}`), ...Array.from({
+            length: 6
+        }, (_, i) => `dtb${i+1}`)];
+        inputNames.forEach(name => {
+            let value = localStorage.getItem(`${name}Value`);
+            if (value) {
+                document.querySelector(`input[name='${name}']`).value = value;
+            }
+        });
+
+        // Cập nhật giá trị trong Local Storage khi nhập một giá trị mới
+        document.querySelector('form').addEventListener('submit', function() {
+            inputNames.forEach(name => {
+                let value = document.querySelector(`input[name='${name}']`).value;
+                localStorage.setItem(`${name}Value`, value);
+            });
+        });
+
+        // Xóa các giá trị đã lưu trong Local Storage khi tải lại trang
+        window.addEventListener('load', function() {
+            localStorage.clear();
+        });
+        
+        // bẫy lỗi
+        function validateInput(name) {
+            var tcd = parseInt(document.getElementsByName("tcd" + name)[0].value);
+            var tcr = parseInt(document.getElementsByName("tcr" + name)[0].value);
+            var dtb = parseFloat(document.getElementsByName("dtb" + name)[0].value);
+
+            if (tcd + tcr > 25) {
+                alert("Lỗi: Tổng số tín chỉ đạt và rớt không được vượt quá 25. Vui lòng kiểm tra lại.");
+                return false;
+            }
+            if (dtb < 0 || dtb > 10) {
+                alert("Lỗi: Điểm trung bình phải nằm trong khoản 0 đến 10. Vui lòng kiểm tra lại.");
+                return false;
+            }
+            return true;
+        }
+
+        document.querySelector("form").addEventListener("submit", function(event) {
+            let isValid = true;
+            for (let i = 1; i <= 6; i++) {
+                if (!validateInput(i)) {
+                    isValid = false;
+                    break;
+                }
+            }
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+
+        document.querySelector("#name").addEventListener("input", function(event) {
+            this.value = this.value.replace(/\d/g, "");
+        /*
+            \d là một ký tự đại diện cho một chữ số từ 0 đến 9.
+            g tìm kiếm tất cả các kết quả phù hợp, thay vì chỉ tìm kiếm kết quả phù hợp đầu tiên.
+            /\d/g sẽ tìm kiếm tất cả các chữ số trong một chuỗi và thay thế ""
+        */
+        });
+        
+        document.querySelector("form").addEventListener("submit", function(event) {
+            let student_id = document.querySelector("#student_id").value;
+            if (student_id.length !== 10) {
+                event.preventDefault();// chặn submit
+                alert("Lỗi: Mã sinh viên phải đủ 10 kí tự. Vui lòng kiểm tra lại.");
+            }
+        });
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let classValue = document.querySelector('input[name="class"]').value;
+            if (classValue.length > 0 && !isNaN(classValue[0])) {
+                event.preventDefault();
+                alert('Vui lòng kiểm tra lại lớp');
+            }
+        });
+    </script>
+    </body>
+
+</html>
